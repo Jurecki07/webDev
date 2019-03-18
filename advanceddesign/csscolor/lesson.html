@@ -1,0 +1,68 @@
+Introduction to Color
+CSS supports a wide variety of colors. These include named colors, like blue, black, and LimeGreen, along with colors described by a numeric value. Using a numeric system allows us to take advantage of the whole spectrum of colors that browsers support. In this lesson, we're going to explore all the color options CSS offers.
+
+Colors in CSS can be described in three different ways:
+
+Named colors — English words that describe colors, also called keyword colors
+RGB — numeric values that describe a mix of red, green, and blue
+HSL — numeric values that describe a mix of hue, saturation, and lightness
+We'll learn about and explore the benefits of each of these in depth. Using only named colors, you may feel like you're picking labeled crayons out of a box. By the end of this lesson, you'll feel like a painter mixing paints on a palette.
+------------------------------------------------------------------------------------------------------
+CSS COLOR
+Foreground vs Background
+Before discussing the specifics of color, it's important to make two distinctions about color. Color can affect the following design aspects:
+
+The foreground color
+The background color
+Foreground color is the color that an element appears in. For example, when a heading is styled to appear green, the foreground color of the heading has been styled.
+
+Conversely, when a heading is styled so that its background appears yellow, the background color of the heading has been styled
+
+In CSS, these two design aspects can be styled with the following two properties:
+
+color - this property styles an element's foreground color.
+background-color - this property styles an element's background color.
+h1 {
+color: Red;
+background-color: Blue;
+}
+In the example above, the text of the heading will appear in red, and the background of the heading will appear blue.
+--------------------------------------------------------------------------------------------------------------------
+Hexadecimal
+One syntax that we can use to specify colors is called hexadecimal. Colors specified using this system are called hex colors. A hex color begins with a hash character (#) which is followed by three or six characters. The characters represent values for red, blue and green.
+
+DarkSeaGreen: #8FBC8F
+Sienna:       #A0522D
+SaddleBrown:  #8B4513
+Brown:        #A52A2A
+Black:        #000000 or #000
+White:        #FFFFFF or #FFF
+Aqua:         #00FFFF or #0FF
+In the example above, you may notice that there are both letters and numbers in the values. This is because the hexadecimal number system has 16 digits (0-15) instead of 10 (0-9) like you are used to. To represent 10-15, we use A-F. Here is a list of many different colors and their hex values.
+
+Notice that Black, White, and Aqua are all represented with both three characters and six characters. This can be done with hex colors whose number pairs are the same characters. In the example above, Aqua can be represented as #0FF because both of the first two characters are 0 and the second and third pairs of characters are both Fs. Keep in mind that all three character hex colors can be represented with six characters (by repeating each character twice) but the same is not true in reverse.
+
+You can include hex colors just as you would include named colors: background-color: #9932cc;
+---------------------------------------------------------------------------------------------------------------------
+We've completed our extensive tour of the colors in CSS! Let's review the key information we've learned.
+
+There are four ways to represent color in CSS:
+
+Named colors — there are 147 named colors, which you can review here.
+
+Hexadecimal or hex colors
+
+Hexadecimal is a number system with has sixteen digits, 0 to 9 followed by "A" to "F".
+Hex values always begin with # and specify values of red, blue and green using hexademical numbers such as #23F41A.
+RGB
+
+RGB colors use the rgb() syntax with one value for red, one value for blue and one value for green.
+RGB values range from 0 to 255 and look like this: rgb(7, 210, 50).
+HSL
+
+HSL stands for hue (the color itself), saturation (the intensity of the color), and lightness (how light or dark a color is).
+Hue ranges from 0 to 360 and saturation and lightness are both represented as percentages like this: hsl(200, 20%, 50%).
+You can add opacity to color in RGB and HSL by adding a fourth value, a, which is represented as a percentage.
+
+Great job! Feel empowered to add a bit of color to each of your projects!
+------------------------------------------------------------------------------------------------------------------------------------
