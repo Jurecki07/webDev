@@ -40,3 +40,22 @@ spaceship.numEngines = 9;
 //Delete a property in spaceship
 delete spaceship['Secret Mission'];
 
+//Using Methods in Javascript
+
+let retreatMessage = 'We no longer wish to conquer your planet. ' +
+    'It is full of dogs, which we do not care for.';
+
+//Retreat is the method
+let alienShip = {
+    retreat() {
+        console.log(retreatMessage)
+    },
+    takeOff() {
+        console.log('Spim... Borp... Glix... Blastoff!')
+    }
+};
+
+//Invoking your 2 methods created
+alienShip.retreat();//returns retreat message
+
+alienShip.takeOff();//returns takeOff
