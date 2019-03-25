@@ -48,3 +48,72 @@ const robot = {
     }};
 
 console.log(robot.provideInfo());
+
+
+// Using arrow functions sometimes is not the best way, its best to avoid them
+const robot = {
+    energyLevel: 100,
+    checkEnergy: () => {
+        console.log(`Energy is currently at ${this.energyLevel}%.`)
+    }
+};
+robot.checkEnergy();
+
+// Rearranged this snippet without using an arrow function
+const robot = {
+    energyLevel: 100,
+    checkEnergy(){
+        console.log(`Energy is currently at ${this.energyLevel}%.`)
+    }
+};
+robot.checkEnergy();
+
+// Reassigning a property the prepend property
+
+const robot = {
+    _energyLevel: 100,
+    recharge(){
+        this._energyLevel += 30;
+        console.log(`Recharged! Energy is currently at ${this._energyLevel}%.`)
+
+    }
+};
+robot._energyLevel = 'high';
+
+// Type-coercion unwanted side affect when mutating objects and there properties
+const robot = {
+    _energyLevel: 100,
+    recharge(){
+        this._energyLevel += 30;
+        console.log(`Recharged! Energy is currently at ${this._energyLevel}%.`)
+
+    }
+};
+// Here it has been changed to a string when it was set to a increasing integer
+robot._energyLevel = 'high';
+
+robot.recharge(); //Recharged! Energy is currently at high30%.
+
+const person = {
+    _firstName: 'John',
+    _lastName: 'Doe',
+    get fullName() {
+        if (this._firstName && this._lastName){
+            return `${this._firstName} ${this._lastName}`;
+        } else {
+            return 'Missing a first name or a last name.';
+        }
+    }
+};
+// To call the getter method:
+person.fullName; // 'John Doe'
+
+
+
+
+
+
+
+
+
+
